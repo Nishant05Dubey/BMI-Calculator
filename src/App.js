@@ -1,8 +1,10 @@
-import React, { useMemo, useState } from 'react';
-import './App.css'
+import React, { useMemo, useState } from "react";
+
+import {  } from "./App.css";
+
 const Hello = () => {
   const [Height,setHeight] = useState(180);
-  const [Weight,setWeight] = useState(70);
+  const [Weight,setWeight] = useState(72);
 
 
   function onWeightChange(event) {
