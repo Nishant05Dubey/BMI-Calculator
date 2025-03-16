@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo, useState } from 'react';
+import './App.css'
+const Hello = () => {
+  const [Height,setHeight] = useState(180);
+  const [Weight,setWeight] = useState(70);
 
-function App() {
+
+  function onWeightChange(event) {
+    setWeight(event.target.value)
+  }
+  function onHeightChange(event) {
+    setHeight(event.target.value)
+  }
+  const output = useMemo(()=>{
+     const calculateHeight = Height / 100;
+
+     return (Weight/(calculateHeight*calculateHeight)).toFixed(1)
+  },[Weight,Height]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <h1>BMI CALCULATOR</h1>
+      <div className='input-section'>
+        <p className='slider-output'>Weight:{Weight}kg</p>
+        <input className='input-slidder'
+        type='range'
+        step={1}
+        min={30}
+        max={200}
+        onChange={onWeightChange}></input>
+        <p className='slider-output'>Height:{Height}cm</p>
+        <input className='input-slidder'
+        type='range'
+        onChange={onHeightChange}
+        min={140}
+        max={220}>
+        </input>
+      </div>
+      <div className='output-section'>
+        <p>YOUR BMI IS</p>
+        <p className='output'>{output}</p>
+      </div>
+    </main>
+  )
 }
 
-export default App;
+export default Hello
