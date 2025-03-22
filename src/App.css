@@ -1,87 +1,56 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* Dark, modern, and visually appealing styling */
 
-body{
-  background-color: skyblue;
-}
-
-main{
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  width: 90vw;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding-bottom: 20px;
+  height: 100vh;
+  margin: 0;
 }
-h1{
-  background-color: black;
-  color: #fff;
+
+main {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #df9d33;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.slider-output {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.input-slidder {
   width: 100%;
-  margin-bottom: 10px;
-  font-size: 2rem;
-  padding: 20px 10px;
-
-}
-.input-secton{
-  width: 70%;
-}
-.input-slider{
-  width: 100%;
-  margin-top: 5px;
-}
-
-.output{
-  padding: 10px 5px;
-  border-radius: 9999px;
-  background-color: #312a80;
-  margin-top:10px;
-  color: #fff;
-}
-
-.output-section{
-  margin-top: 20px; }
-/* }
-body{
-  margin: 0%;
-  padding: 0%;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: skyblue;
- }
- span{
-  color: red;
- }
- .wrapper{
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform:translate(-50%,-50%);
-  padding: 15px;
-  background: black;
-  border-radius: 5px;
-  box-shadow: rgb(38,57,77)0px 20px 30px -10px;
-
- } 
- input{
-    outline: none;
-    border: none;
-    padding: 5px;
- }
- button{
-  color: white;
-  padding: 10px;
-  border: 2px solid white;
-  background: black;
-  display: block;
-  margin-top: 10%;
   cursor: pointer;
+  accent-color: #9a8739;
+}
 
- } */
+.output-section {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(255, 204, 0, 0.3);
+}
+
+.output {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b89b24;
+  margin-top: 10px;
+}
